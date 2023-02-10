@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+
+
+}
+body {
+    background:white;
+
+  font-family: "Open Sans", sans-serif;
+  width: 800px;
+
+}
+img {
+
+  width: 100%;
+
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  display:inline-block;
+}
+a {
+  margin-left: 30px;
+  color: #3c63cc;
+  font-weight: 600;
+}
+a:hover {
+  margin-left: 30px;
+  color: #2fa1fd;
+}
+.modernForm {
+  max-width: 1200px;
+  display: flex;
+  margin: 100px auto;
+  background-color: rgb(255, 252, 252);
+  box-shadow: 15px 15px 14px 15px rgba(55, 97, 97, 0.997);
+  border-radius: 10px;
+}
+.imageSection {
+  flex-basis: 50%;
+  position: relative;
+  color: rgb(23, 19, 19);
+}
+
+.textInside,
+.service {
+  position: absolute;
+}
+.contactForm {
+  flex-basis: 45%;
+  margin: auto;
+  color:#093637;
+  padding-left: 30px;
+}
+.contactForm h1 {
+  padding: 15px 0;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: rgb(177, 177, 177) 1px solid;
+  margin-top: 10px;
+}
+.name {
+  position: relative;
+  margin-bottom: 20px;
+}
+.iconName {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+
+
+input[type="submit"] {
+    background:teal;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 30px 0;
+  cursor: pointer;
+  float: left;
+}
+input[type="submit"]:hover
+
+
+
+
+
+  .modernForm {
+    flex-wrap: wrap;
+  }
+  .imageSection,
+  .contactForm {
+    flex-basis: 100%;
+  }
+  .overlay,
+  .contactForm {
+    padding-right: 30px;
+  }
+
+
+    </style>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <body>
+
+      <div class="contactForm">
+        <h1>Registaration Form</h1>
+        <form method="post">{% csrf_token %}
+          <div class="name">
+            <label for="fullName">Full Name:</label>
+            <input type="text" name="name" id="fullName" placeholder="ex: Lindsey Wilson" required/>
+
+          </div>
+          <div class="name">
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required />
+
+          </div>
+          <div class="name">
+            <label for="Password">Password:</label>
+            <input type="password" name="password" id="password" required />
+
+          </div>
+          <div class="name">
+            <label for="Password">Confirm Password:</label>
+            <input type="password" name="cpassword" id="password" required />
+
+          </div>
+          <input type="submit" value="Register">
+        </form>
+      </div>
+  </body>
+
+</body>
+</html>

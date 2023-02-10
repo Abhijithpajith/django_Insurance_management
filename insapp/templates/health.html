@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     section{
+     width=1000px;
+     }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+{% include 'navbar.html' %}
+<br><br>
+    <section class="vh-100 bg-image"
+    >
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5"> Registration Form </h2>
+
+                <form method="post" enctype="multipart/form-data" > {% csrf_token %}
+
+                  <div class="form-outline  ">
+                    <input   value="{{a.ins_name}}"  type="text" name="policy_name" readonly class="form-control form-control-lg" />
+
+                  </div><br>
+
+                  <div class="form-outline ">
+                    <input name="policy_holder" type="text" class="form-control form-control-lg" placeholder="owner name" />
+                  </div><br>
+
+                    <div class="form-outline ">
+                    <input name="amount" value="{{a.Premium}}" type="number" class="form-control form-control-lg" readonly />
+                  </div><br>
+
+                  <div class="form-outline mb-4">
+                    <input name="image" type="file" class="form-control form-control-lg" placeholder=""  />
+
+                  </div>
+
+                 <div class="form-outline mb-4">
+                    <input  name="age" type="number" class="form-control form-control-lg" placeholder="age" />
+
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input  name="gender" type="text"  class="form-control form-control-lg" placeholder="gender"/>
+                  </div>
+
+                     <div class="form-outline mb-4">
+                    <input  name="holder_status" type="text"  class="form-control form-control-lg" placeholder="Married_status"/>
+                  </div>
+
+                     <div class="form-outline mb-4">
+                    <input  name="date_of_birth" type="date"  class="form-control form-control-lg" placeholder="Date "/>
+                  </div>
+
+                     <div class="form-outline mb-4">
+                    <input  name="address" type="text"  class="form-control form-control-lg" placeholder="address "/>
+                  </div>
+
+                     <div class="form-outline mb-4">
+                    <input  name="email" type="email"  class="form-control form-control-lg" placeholder="email "/>
+                  </div>
+
+                     <div class="form-outline mb-4">
+                    <input  name="phone" type="number"  class="form-control form-control-lg" placeholder="number"/>
+                  </div>
+
+
+                  <div class="d-flex justify-content-center mt-4">
+                    <button type="submit"
+                      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                  </div>
+
+
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+{% include 'footer.html' %}
+</body>
+</html>
